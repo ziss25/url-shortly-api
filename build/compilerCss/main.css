@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding-top: 50px;
+  overflow-x: hidden;
+  background-color: #f9fafb;
+}
+
+header {
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-top: -1px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.title-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(255deg, 11%, 22%);
+}
+
+.hamb-menu {
+  color: hsl(257deg, 7%, 63%);
+}
+
+.hero {
+  display: flex;
+  height: calc(100vh - 100px);
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+}
+.hero .hero-img {
+  width: 100%;
+}
+.hero .hero-img img {
+  width: 100%;
+  transform: translateX(70px);
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(255deg, 11%, 22%);
+  margin-top: 1rem;
+}
+
+.hero-text {
+  font-size: 18px;
+  text-align: center;
+  color: hsl(0deg, 0%, 75%);
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.hero-button {
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: hsl(180deg, 66%, 49%);
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 10px 2rem;
+  margin-top: 1rem;
+}
+
+.shortly-contain {
+  margin-top: 3rem;
+}
+
+.input-shortly {
+  border: 1px solid blue;
+  width: calc(100% - 100px);
+  margin: auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: url("../../images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: hsl(257deg, 27%, 26%);
+}
+.input-shortly .card {
+  display: flex;
+  flex-direction: column;
+}
+.input-shortly .card input {
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+}
+.input-shortly .card ::-moz-placeholder {
+  font-size: 16px;
+  color: hsl(0deg, 0%, 75%);
+  font-weight: 500;
+}
+.input-shortly .card :-ms-input-placeholder {
+  font-size: 16px;
+  color: hsl(0deg, 0%, 75%);
+  font-weight: 500;
+}
+.input-shortly .card ::placeholder {
+  font-size: 16px;
+  color: hsl(0deg, 0%, 75%);
+  font-weight: 500;
+}
+.input-shortly .card button {
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-utils {
+  padding: 12px;
+}
+
+.advance-statistic {
+  width: calc(100vw - 30px);
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.advance-contain {
+  margin-bottom: 3rem;
+}
+.advance-contain h3 {
+  font-weight: 700;
+  color: hsl(255deg, 11%, 22%);
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+.advance-contain p {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 75%);
+  font-size: 1.3rem;
+}
+
+.Branch-Recognition {
+  padding: 5rem 1.5rem;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: white;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.Branch-Recognition h4 {
+  font-weight: 700;
+  color: hsl(255deg, 11%, 22%);
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+.Branch-Recognition p {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 75%);
+  font-size: 1.3rem;
+}
+
+.Detailed-Records {
+  padding: 5rem 1.5rem;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: white;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.Detailed-Records h4 {
+  font-weight: 700;
+  color: hsl(255deg, 11%, 22%);
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+.Detailed-Records p {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 75%);
+  font-size: 1.3rem;
+}
+
+.Fully-Customizable {
+  padding: 5rem 1.5rem;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: white;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.Fully-Customizable h4 {
+  font-weight: 700;
+  color: hsl(255deg, 11%, 22%);
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+.Fully-Customizable p {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 75%);
+  font-size: 1.3rem;
+}
+
+.stats-utilits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: hsl(255deg, 11%, 22%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  right: calc(50% - 40px);
+  transform: scale(0.9);
+}/*# sourceMappingURL=main.css.map */
