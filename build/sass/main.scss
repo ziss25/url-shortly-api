@@ -8,7 +8,7 @@
 
 @mixin btn-cyan($padding: 10px 2rem) {
   border: none;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 700;
   color: white;
   background-color: $Cyan;
@@ -19,15 +19,15 @@
 @mixin myBorder {
   border: 1px solid red;
 }
-@mixin title {
+@mixin title($color: $Very-Dark-Blue) {
   font-weight: 700;
-  color: $Very-Dark-Blue;
-  font-size: 1.7rem;
+  color: $color;
+  font-size: 1.5rem;
 }
 @mixin text {
   font-weight: 500;
   color: $Gray;
-  font-size: 1.3rem;
+  font-size: 18px;
 }
 @mixin stats {
   padding: 5rem 1.5rem;
@@ -38,6 +38,7 @@
 // ---- variable colors----
 // ### Primary
 $Cyan: hsl(180, 66%, 49%);
+$Cyan-primary: hsl(180, 70%, 60%);
 $Dark-Violet: hsl(257, 27%, 26%);
 // ### Secondary
 $Red: hsl(0, 87%, 67%);
@@ -48,15 +49,15 @@ $Very-Dark-Blue: hsl(255, 11%, 22%);
 $Very-Dark-Violet: hsl(260, 8%, 14%);
 
 body {
-  padding-top: 50px;
-  overflow-x: hidden;
-  background-color: #f9fafb;
+  padding-top: 55px;
+  background-color: #f3f4f6;
+  position: relative;
 }
 
 // --- headeer -----
 header {
   display: flex;
-  height: 40px;
+  height: 50px;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
@@ -76,24 +77,78 @@ header {
 }
 .hamb-menu {
   color: $Grayish-Violet;
+  cursor: pointer;
+}
+
+// ------ nav -------
+nav {
+  // @include myBorder();
+  width: calc(100vw - 50px);
+  background-color: $Dark-Violet;
+  color: white;
+  margin: 0.5rem auto;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(-1000px);
+  transition: all 1s ease-in;
+  h3 {
+    margin-bottom: 1rem;
+  }
+  hr {
+    border: 1px solid #4b5563;
+    margin: 1.5rem 0;
+  }
+  button {
+    @include btn-cyan();
+    width: 100%;
+  }
+  h3:hover {
+    color: $Gray;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: $Cyan-primary;
+  }
+}
+// class click hamb
+.nav-active {
+  transform: translateY(0px);
+  transition: all 1s ease-out;
+}
+// class nav dekstop
+.nav-dekstop-left-contain {
+  display: none;
+}
+.nav-dekstop-right-contain {
+  display: none;
 }
 
 // ------ main -----
 // ------ hero-----
 .hero {
   // border: 1px solid red;
-  display: flex;
-  height: calc(100vh - 100px);
-  flex-direction: column;
-  align-items: center;
-  padding-top: 3rem;
+  // display: flex;
+  // height: calc(100vh - 100px);
+  // flex-direction: column;
+  // align-items: center;
+  padding-top: 1.5rem;
+  // margin-bottom: 3rem;
   .hero-img {
     // border: 1px solid green;
+    overflow: hidden;
     width: 100%;
     img {
       // border: 1px solid blue;
       width: 100%;
-      transform: translateX(70px);
+      transform: translateX(100px);
       // transform: scale(1.3);
     }
   }
@@ -115,6 +170,15 @@ header {
 .hero-button {
   @include btn-cyan();
   margin-top: 1rem;
+}
+.hero-button:hover {
+  background-color: $Cyan-primary;
+}
+.section-right {
+  // @include myBorder();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 // ------ shortly-contain -----
@@ -143,7 +207,7 @@ header {
       border-radius: 6px;
     }
     ::placeholder {
-      font-size: 16px;
+      font-size: 14px;
       color: $Gray;
       font-weight: 500;
     }
@@ -154,6 +218,10 @@ header {
       border-radius: 6px;
       font-size: 1rem;
       font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: $Cyan-primary;
     }
   }
 }
@@ -163,7 +231,7 @@ header {
 
 // ---- Advanced Statistics -----
 .advance-statistic {
-  width: calc(100vw - 30px);
+  width: calc(100vw - 50px);
   // @include myBorder();
   margin: 2rem auto;
   text-align: center;
@@ -182,7 +250,7 @@ header {
 .Branch-Recognition {
   // @include myBorder();
   @include stats();
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   position: relative;
   h4 {
     @include title();
@@ -196,7 +264,7 @@ header {
   // @include myBorder();
   @include stats();
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   h4 {
     @include title();
     margin-bottom: 0.5rem;
@@ -209,7 +277,7 @@ header {
   // @include myBorder();
   @include stats();
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   h4 {
     @include title();
     margin-bottom: 0.5rem;
@@ -225,8 +293,8 @@ header {
   align-items: center;
   padding: 1rem;
   background-color: $Very-Dark-Blue;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   position: absolute;
   top: -40px;
@@ -234,4 +302,219 @@ header {
   transform: scale(0.9);
 }
 
-// next week
+// container-line-stats
+.container-line-stats {
+  // @include myBorder();
+  position: relative;
+}
+.container-line-stats::after {
+  content: 'a';
+  width: 6px;
+  height: 100%;
+  background-color: $Cyan;
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+}
+
+// ------ boost ----------
+.Boost {
+  // @include myBorder();
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../../images/bg-boost-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $Dark-Violet;
+  h3 {
+    @include title(white);
+    margin-bottom: 1rem;
+  }
+  button {
+    @include btn-cyan();
+  }
+  button:hover {
+    background-color: $Cyan-primary;
+  }
+}
+
+// ------ footer -----
+footer {
+  // @include myBorder();
+  background-color: $Very-Dark-Violet;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+// feature, ressources, company
+.shortly {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+.Features {
+  margin-bottom: 2rem;
+  font-size: 18px;
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    color: $Gray;
+    cursor: pointer;
+  }
+  h5:hover {
+    color: white;
+  }
+}
+.Resources {
+  margin-bottom: 2rem;
+  font-size: 18px;
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    cursor: pointer;
+    color: $Gray;
+  }
+  h5:hover {
+    color: white;
+  }
+}
+.Company {
+  margin-bottom: 2rem;
+  font-size: 18px;
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    cursor: pointer;
+    color: $Gray;
+  }
+  h5:hover {
+    color: white;
+  }
+}
+
+// social media
+.social-media-link {
+  // @include myBorder();
+  width: 200px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  :hover {
+    color: $Cyan;
+    cursor: pointer;
+  }
+}
+
+// credits
+.credits {
+  font-size: 18px;
+  a {
+    color: $Cyan;
+  }
+  a:hover {
+    color: $Cyan-primary;
+  }
+}
+
+// ----- responsive ------
+// tablet
+@media (min-width: 576px) {
+  * {
+    // color: red;
+  }
+  header {
+    // @include myBorder();
+    justify-content: space-around;
+    align-items: center;
+    .title-brand {
+      transform: translateY(-2px);
+    }
+    .nav-dekstop-left-contain {
+      display: block;
+      // @include myBorder();
+      width: 300px;
+      transform: translateX(-50px);
+      ul {
+        list-style: none;
+        display: flex;
+        margin-left: 1rem;
+        li {
+          margin-right: 10px;
+          font-size: 14px;
+          cursor: pointer;
+          color: $Gray;
+        }
+        li:hover {
+          color: $Very-Dark-Violet;
+          cursor: pointer;
+        }
+      }
+    }
+    .nav-dekstop-right-contain {
+      // @include myBorder();
+      display: block;
+      transform: translateY(-2px);
+      .login {
+        color: red;
+        margin-right: 12px;
+        padding: 2px 10px;
+        border: none;
+        background-color: white;
+        color: $Gray;
+      }
+      .login:hover {
+        color: $Very-Dark-Violet;
+      }
+      .sign-up {
+        padding: 2px 10px;
+        border-radius: 1rem;
+        border: none;
+        background-color: $Cyan;
+        color: white;
+        cursor: pointer;
+      }
+      .sign-up:hover {
+        background-color: $Cyan-primary;
+      }
+    }
+    .hamb-menu {
+      display: none;
+    }
+  }
+
+  .hero {
+    // @include myBorder();
+    .hero-img {
+      // @include myBorder();
+      display: flex;
+      justify-content: center;
+      img {
+        width: calc(100% - 175px);
+      }
+    }
+  }
+}
+
+// .hero {
+//   flex-direction: row;
+//   @include myBorder();
+//   .hero-img {
+//     @include myBorder();
+//     order: 2;
+//     img {
+//       width: 400px;
+//     }
+//   }
+//   .section-right {
+//     @include myBorder();
+//     order: 1;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }

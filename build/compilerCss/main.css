@@ -6,14 +6,14 @@
 }
 
 body {
-  padding-top: 50px;
-  overflow-x: hidden;
-  background-color: #f9fafb;
+  padding-top: 55px;
+  background-color: #f3f4f6;
+  position: relative;
 }
 
 header {
   display: flex;
-  height: 40px;
+  height: 50px;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
@@ -34,21 +34,76 @@ header {
 
 .hamb-menu {
   color: hsl(257deg, 7%, 63%);
+  cursor: pointer;
+}
+
+nav {
+  width: calc(100vw - 50px);
+  background-color: hsl(257deg, 27%, 26%);
+  color: white;
+  margin: 0.5rem auto;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(-1000px);
+  transition: all 1s ease-in;
+}
+nav h3 {
+  margin-bottom: 1rem;
+}
+nav hr {
+  border: 1px solid #4b5563;
+  margin: 1.5rem 0;
+}
+nav button {
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: hsl(180deg, 66%, 49%);
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 10px 2rem;
+  width: 100%;
+}
+nav h3:hover {
+  color: hsl(0deg, 0%, 75%);
+  cursor: pointer;
+}
+nav button:hover {
+  background-color: hsl(180deg, 70%, 60%);
+}
+
+.nav-active {
+  transform: translateY(0px);
+  transition: all 1s ease-out;
+}
+
+.nav-dekstop-left-contain {
+  display: none;
+}
+
+.nav-dekstop-right-contain {
+  display: none;
 }
 
 .hero {
-  display: flex;
-  height: calc(100vh - 100px);
-  flex-direction: column;
-  align-items: center;
-  padding-top: 3rem;
+  padding-top: 1.5rem;
 }
 .hero .hero-img {
+  overflow: hidden;
   width: 100%;
 }
 .hero .hero-img img {
   width: 100%;
-  transform: translateX(70px);
+  transform: translateX(100px);
 }
 
 .hero-title {
@@ -69,7 +124,7 @@ header {
 
 .hero-button {
   border: none;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 700;
   color: white;
   background-color: hsl(180deg, 66%, 49%);
@@ -77,6 +132,16 @@ header {
   border-radius: 30px;
   padding: 10px 2rem;
   margin-top: 1rem;
+}
+
+.hero-button:hover {
+  background-color: hsl(180deg, 70%, 60%);
+}
+
+.section-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .shortly-contain {
@@ -105,17 +170,17 @@ header {
   border-radius: 6px;
 }
 .input-shortly .card ::-moz-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   color: hsl(0deg, 0%, 75%);
   font-weight: 500;
 }
 .input-shortly .card :-ms-input-placeholder {
-  font-size: 16px;
+  font-size: 14px;
   color: hsl(0deg, 0%, 75%);
   font-weight: 500;
 }
 .input-shortly .card ::placeholder {
-  font-size: 16px;
+  font-size: 14px;
   color: hsl(0deg, 0%, 75%);
   font-weight: 500;
 }
@@ -126,6 +191,10 @@ header {
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 700;
+  cursor: pointer;
+}
+.input-shortly .card button:hover {
+  background-color: hsl(180deg, 70%, 60%);
 }
 
 .card-utils {
@@ -133,7 +202,7 @@ header {
 }
 
 .advance-statistic {
-  width: calc(100vw - 30px);
+  width: calc(100vw - 50px);
   margin: 2rem auto;
   text-align: center;
 }
@@ -144,13 +213,13 @@ header {
 .advance-contain h3 {
   font-weight: 700;
   color: hsl(255deg, 11%, 22%);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 .advance-contain p {
   font-weight: 500;
   color: hsl(0deg, 0%, 75%);
-  font-size: 1.3rem;
+  font-size: 18px;
 }
 
 .Branch-Recognition {
@@ -158,19 +227,19 @@ header {
   box-sizing: border-box;
   border-radius: 12px;
   background-color: white;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   position: relative;
 }
 .Branch-Recognition h4 {
   font-weight: 700;
   color: hsl(255deg, 11%, 22%);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 .Branch-Recognition p {
   font-weight: 500;
   color: hsl(0deg, 0%, 75%);
-  font-size: 1.3rem;
+  font-size: 18px;
 }
 
 .Detailed-Records {
@@ -179,18 +248,18 @@ header {
   border-radius: 12px;
   background-color: white;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .Detailed-Records h4 {
   font-weight: 700;
   color: hsl(255deg, 11%, 22%);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 .Detailed-Records p {
   font-weight: 500;
   color: hsl(0deg, 0%, 75%);
-  font-size: 1.3rem;
+  font-size: 18px;
 }
 
 .Fully-Customizable {
@@ -199,18 +268,18 @@ header {
   border-radius: 12px;
   background-color: white;
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 .Fully-Customizable h4 {
   font-weight: 700;
   color: hsl(255deg, 11%, 22%);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 .Fully-Customizable p {
   font-weight: 500;
   color: hsl(0deg, 0%, 75%);
-  font-size: 1.3rem;
+  font-size: 18px;
 }
 
 .stats-utilits {
@@ -219,11 +288,200 @@ header {
   align-items: center;
   padding: 1rem;
   background-color: hsl(255deg, 11%, 22%);
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   position: absolute;
   top: -40px;
   right: calc(50% - 40px);
   transform: scale(0.9);
+}
+
+.container-line-stats {
+  position: relative;
+}
+
+.container-line-stats::after {
+  content: "a";
+  width: 6px;
+  height: 100%;
+  background-color: hsl(180deg, 66%, 49%);
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+}
+
+.Boost {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../../images/bg-boost-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: hsl(257deg, 27%, 26%);
+}
+.Boost h3 {
+  font-weight: 700;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.Boost button {
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: hsl(180deg, 66%, 49%);
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 10px 2rem;
+}
+.Boost button:hover {
+  background-color: hsl(180deg, 70%, 60%);
+}
+
+footer {
+  background-color: hsl(260deg, 8%, 14%);
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+
+.shortly {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+
+.Features {
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+.Features h4 {
+  margin-bottom: 0.5rem;
+}
+.Features h5 {
+  color: hsl(0deg, 0%, 75%);
+  cursor: pointer;
+}
+.Features h5:hover {
+  color: white;
+}
+
+.Resources {
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+.Resources h4 {
+  margin-bottom: 0.5rem;
+}
+.Resources h5 {
+  cursor: pointer;
+  color: hsl(0deg, 0%, 75%);
+}
+.Resources h5:hover {
+  color: white;
+}
+
+.Company {
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+.Company h4 {
+  margin-bottom: 0.5rem;
+}
+.Company h5 {
+  cursor: pointer;
+  color: hsl(0deg, 0%, 75%);
+}
+.Company h5:hover {
+  color: white;
+}
+
+.social-media-link {
+  width: 200px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-media-link :hover {
+  color: hsl(180deg, 66%, 49%);
+  cursor: pointer;
+}
+
+.credits {
+  font-size: 18px;
+}
+.credits a {
+  color: hsl(180deg, 66%, 49%);
+}
+.credits a:hover {
+  color: hsl(180deg, 70%, 60%);
+}
+
+@media (min-width: 576px) {
+  header {
+    justify-content: space-around;
+    align-items: center;
+  }
+  header .title-brand {
+    transform: translateY(-2px);
+  }
+  header .nav-dekstop-left-contain {
+    display: block;
+    width: 300px;
+    transform: translateX(-50px);
+  }
+  header .nav-dekstop-left-contain ul {
+    list-style: none;
+    display: flex;
+    margin-left: 1rem;
+  }
+  header .nav-dekstop-left-contain ul li {
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: hsl(0deg, 0%, 75%);
+  }
+  header .nav-dekstop-left-contain ul li:hover {
+    color: hsl(260deg, 8%, 14%);
+    cursor: pointer;
+  }
+  header .nav-dekstop-right-contain {
+    display: block;
+    transform: translateY(-2px);
+  }
+  header .nav-dekstop-right-contain .login {
+    color: red;
+    margin-right: 12px;
+    padding: 2px 10px;
+    border: none;
+    background-color: white;
+    color: hsl(0deg, 0%, 75%);
+  }
+  header .nav-dekstop-right-contain .login:hover {
+    color: hsl(260deg, 8%, 14%);
+  }
+  header .nav-dekstop-right-contain .sign-up {
+    padding: 2px 10px;
+    border-radius: 1rem;
+    border: none;
+    background-color: hsl(180deg, 66%, 49%);
+    color: white;
+    cursor: pointer;
+  }
+  header .nav-dekstop-right-contain .sign-up:hover {
+    background-color: hsl(180deg, 70%, 60%);
+  }
+  header .hamb-menu {
+    display: none;
+  }
+  .hero .hero-img {
+    display: flex;
+    justify-content: center;
+  }
+  .hero .hero-img img {
+    width: calc(100% - 175px);
+  }
 }/*# sourceMappingURL=main.css.map */
