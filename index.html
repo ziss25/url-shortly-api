@@ -53,7 +53,12 @@
         <div class="input-shortly">
           <div class="card">
             <input id="userInput" class="card-utils" type="text" placeholder="Shorten a link here..." />
-            <button id="submit" class="card-utils">Shorten It!</button>
+            <button id="submit" class="card-utils animate">
+              <h3 class="shorten-text">Shorten it</h3>
+              <svg class="spinner" viewBox="0 0 50 50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+              </svg>
+            </button>
           </div>
         </div>
         <div class="root"></div>
@@ -133,6 +138,7 @@
 
       <div class="attribution credits">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/ziss25">@ziss25</a>.</div>
     </footer>
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="build/javascript/main.js"></script>
     <!-- <img src="images/illustration-working.svg" alt="" /> -->

@@ -457,6 +457,71 @@ footer {
   font-weight: 600;
 }
 
+.animate {
+  position: relative;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  display: none;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 3px;
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+}
+.spinner .path {
+  stroke: white;
+  stroke-linecap: round;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
 @media (min-width: 576px) {
   header {
     justify-content: space-around;
@@ -592,6 +657,9 @@ footer {
     width: 18%;
     height: 45px;
     margin-left: 10px;
+  }
+  .spinner {
+    top: 10px;
   }
   .advance-statistic .advance-contain {
     width: 40%;

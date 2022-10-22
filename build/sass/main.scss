@@ -53,7 +53,6 @@ body {
   padding-top: 55px;
   background-color: #f3f4f6;
   // background-color: #e5e7eb; // pas
-
   position: relative;
 }
 
@@ -469,6 +468,53 @@ footer {
   }
 }
 
+// animate btn loading
+.animate {
+  position: relative;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  display: none;
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 3px;
+  left: calc(50% - 15px);
+  // margin: -25px 0 0 -25px;
+  width: 30px;
+  height: 30px;
+
+  & .path {
+    stroke: white;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
 // ----- responsive ------
 // tablet
 @media (min-width: 576px) {
@@ -634,6 +680,9 @@ footer {
         }
       }
     }
+  }
+  .spinner {
+    top: 10px;
   }
   .advance-statistic {
     // @include myBorder();
