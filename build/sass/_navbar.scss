@@ -1,0 +1,50 @@
+// ------ nav -------
+nav {
+  // @include myBorder();
+  width: calc(100vw - 50px);
+  background-color: $Dark-Violet;
+  color: white;
+  margin: 0.5rem auto;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(-1000px);
+  transition: all 1s ease-in;
+  h3 {
+    margin-bottom: 1rem;
+  }
+  hr {
+    border: 1px solid #4b5563;
+    margin: 1.5rem 0;
+  }
+  button {
+    @include btn-cyan();
+    width: 100%;
+  }
+  h3:hover {
+    color: $Gray;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: $Cyan-primary;
+  }
+}
+// class click hamb
+.nav-active {
+  transform: translateY(0px);
+  transition: all 1s ease-out;
+}
+// class nav dekstop
+.nav-dekstop-left-contain {
+  display: none;
+}
+.nav-dekstop-right-contain {
+  display: none;
+}

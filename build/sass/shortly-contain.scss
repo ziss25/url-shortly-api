@@ -1,0 +1,92 @@
+// ------ shortly-contain -----
+.shortly-contain {
+  margin-top: 3rem;
+  // @include myBorder();
+}
+.input-shortly {
+  border: 1px solid blue;
+  width: calc(100% - 100px);
+  margin: auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: url('../../images/bg-shorten-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: $Dark-Violet;
+  .card {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    input {
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 6px;
+    }
+    ::placeholder {
+      font-size: 14px;
+      color: $Gray;
+      font-weight: 500;
+    }
+    button {
+      background-color: $Cyan;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: $Cyan-primary;
+    }
+  }
+}
+.card-utils {
+  @include myBorder();
+  padding: 12px;
+}
+
+// result dari api
+.root {
+  // border: 1px solid blue;
+}
+.urlBase {
+  // @include myBorder();
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $Gray;
+}
+.output-shortly {
+  // @include myBorder();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 1rem;
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: $Very-Dark-Blue; // align-items: center;
+  // @include myBorder();
+  h3 {
+    margin-right: 1rem;
+    // @include myBorder();
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 0.3rem;
+    font-weight: 400;
+    color: $Cyan;
+  }
+  button {
+    background-color: $Cyan;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    // @include myBorder();
+    display: inline-block;
+    width: 100%;
+    color: white;
+    font-weight: 600;
+  }
+}

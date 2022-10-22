@@ -1,27 +1,40 @@
 const nav = document.querySelector('nav');
 const hamb = document.querySelector('.hamb-menu');
-const buttons = document.querySelectorAll('button');
 const submit = document.querySelector('#submit');
 const userInput = document.querySelector('#userInput');
 const root = document.querySelector('.root');
 const animate = document.querySelector('.spinner');
 const shortenText = document.querySelector('.shorten-text');
+const buttons = document.querySelectorAll('button');
+const btnMore = document.querySelectorAll('.btn-more');
+
 class Myclass extends Swal {}
 
 // hamb click
 hamb.addEventListener('click', function () {
   nav.classList.toggle('nav-active');
 });
-// all buttons
-// buttons.forEach((button) => {
-//   button.addEventListener('click', function () {
-//     Myclass.fire({
-//       icon: 'error',
-//       title: 'Oops...',
-//       text: 'untuk sementara begini aja dlu!',
-//     });
-//   });
-// });
+// button more
+btnMore.forEach((button) => {
+  button.addEventListener('click', function () {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      },
+    });
+
+    Toast.fire({
+      icon: 'question',
+      title: 'ntar dulu ini beda ni...',
+    });
+  });
+});
 // btn request api
 const datas = [];
 submit.addEventListener('click', async () => {
@@ -36,7 +49,7 @@ submit.addEventListener('click', async () => {
     Myclass.fire({
       icon: 'error',
       title: 'url tidak valid',
-      text: 'silahkan url yg bener',
+      text: 'silahkan masukkan url yg bener.....',
     });
   }
 });
@@ -66,7 +79,7 @@ function update() {
           <div class="urlBase">${e.original}</div>
           <div class="urlEndpoint">
             <h3 class="p1">${e.short}</h3>
-            <input style="opacity: 0; position: absolute;" value="${e.short}" ></input>
+            <input style="opacity: 0; position: absolute; right: 1000px;" value="${e.short}" ></input>
             <button onclick="copied()" style="cursor: pointer;" >copy</button>
           </div>
         </div>
@@ -92,6 +105,6 @@ function copied() {
   setTimeout(() => {
     selectTarget.innerText = 'copy';
     selectTarget.style.backgroundColor = 'hsl(180, 66%, 49%)';
-    selectTarget.style.transition = 'all ease-out 1s';
+    selectTarget.style.transition = 'all ease-out .5s';
   }, 2000);
 }

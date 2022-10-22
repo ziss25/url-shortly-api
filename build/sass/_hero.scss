@@ -1,0 +1,50 @@
+.hero {
+  // border: 1px solid red;
+  // display: flex;
+  // height: calc(100vh - 100px);
+  // flex-direction: column;
+  // align-items: center;
+  padding-top: 1.5rem;
+  // margin-bottom: 3rem;
+  .hero-img {
+    // border: 1px solid green;
+    overflow: hidden;
+    width: 100%;
+    img {
+      // border: 1px solid blue;
+      width: 100%;
+      transform: translateX(70px);
+      // transform: scale(1.3);
+    }
+  }
+}
+
+// ------ main -----
+// ------ hero-----
+.hero-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $Very-Dark-Blue;
+  margin-top: 1rem;
+}
+.hero-text {
+  font-size: 18px;
+  text-align: center;
+  color: $Gray;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.hero-button {
+  @include btn-cyan();
+  margin-top: 1rem;
+}
+.hero-button:hover {
+  background-color: $Cyan-primary;
+}
+.section-right {
+  // @include myBorder();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

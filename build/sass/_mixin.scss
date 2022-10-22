@@ -1,0 +1,30 @@
+@mixin btn-cyan($padding: 10px 2rem) {
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: $Cyan;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: $padding;
+}
+@mixin myBorder {
+  border: 1px solid red;
+}
+@mixin title($color: $Very-Dark-Blue) {
+  font-weight: 700;
+  color: $color;
+  font-size: 1.5rem;
+}
+@mixin text {
+  font-weight: 500;
+  color: $Gray;
+  font-size: 18px;
+}
+@mixin stats {
+  padding: 5rem 1.5rem;
+  // padding: 2rem 1rem;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: white;
+}

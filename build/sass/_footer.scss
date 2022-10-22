@@ -1,0 +1,77 @@
+// ------ footer -----
+footer {
+  // @include myBorder();
+  background-color: $Very-Dark-Violet;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+// feature, ressources, company
+.shortly {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+.Features {
+  margin-bottom: 2rem;
+  font-size: 18px;
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    color: $Gray;
+    cursor: pointer;
+  }
+  h5:hover {
+    color: white;
+  }
+}
+.Resources {
+  margin-bottom: 2rem;
+  font-size: 18px;
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    cursor: pointer;
+    color: $Gray;
+  }
+  h5:hover {
+    color: white;
+  }
+}
+.Company {
+  margin-bottom: 2rem;
+  font-size: 18px;
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+  h5 {
+    cursor: pointer;
+    color: $Gray;
+  }
+  h5:hover {
+    color: white;
+  }
+}
+// social media
+.social-media-link {
+  // @include myBorder();
+  width: 200px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  :hover {
+    color: $Cyan;
+    cursor: pointer;
+  }
+}
+// credits
+.credits {
+  font-size: 18px;
+  a {
+    color: $Cyan;
+  }
+  a:hover {
+    color: $Cyan-primary;
+  }
+}

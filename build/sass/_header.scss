@@ -1,0 +1,25 @@
+// --- headeer -----
+header {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-top: -1px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  // border: 1px solid red;
+}
+.title-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $Very-Dark-Blue;
+}
+.hamb-menu {
+  color: $Grayish-Violet;
+  cursor: pointer;
+}

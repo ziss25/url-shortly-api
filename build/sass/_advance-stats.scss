@@ -1,0 +1,87 @@
+// ---- Advanced Statistics -----
+.advance-statistic {
+  width: calc(100vw - 50px);
+  // @include myBorder();
+  margin: 2rem auto;
+  text-align: center;
+}
+.advance-contain {
+  // @include myBorder();
+  margin-bottom: 3rem;
+  h3 {
+    @include title();
+    margin-bottom: 0.5rem;
+  }
+  p {
+    @include text();
+  }
+}
+.Branch-Recognition {
+  // @include myBorder();
+  @include stats();
+  margin-bottom: 5rem;
+  position: relative;
+  h4 {
+    @include title();
+    margin-bottom: 0.5rem;
+  }
+  p {
+    @include text();
+  }
+}
+.Detailed-Records {
+  // @include myBorder();
+  @include stats();
+  position: relative;
+  margin-bottom: 5rem;
+  h4 {
+    @include title();
+    margin-bottom: 0.5rem;
+  }
+  p {
+    @include text();
+  }
+}
+.Fully-Customizable {
+  // @include myBorder();
+  @include stats();
+  position: relative;
+  margin-bottom: 1.5rem;
+  h4 {
+    @include title();
+    margin-bottom: 0.5rem;
+  }
+  p {
+    @include text();
+  }
+}
+// class stats utilits
+.stats-utilits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: $Very-Dark-Blue;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  right: calc(50% - 40px);
+  transform: scale(0.9);
+}
+
+// container-line-stats
+.container-line-stats {
+  // @include myBorder();
+  position: relative;
+}
+.container-line-stats::after {
+  content: 'a';
+  width: 6px;
+  height: 100%;
+  background-color: $Cyan;
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+}

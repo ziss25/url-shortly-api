@@ -103,7 +103,7 @@ nav button:hover {
 }
 .hero .hero-img img {
   width: 100%;
-  transform: translateX(100px);
+  transform: translateX(70px);
 }
 
 .hero-title {
@@ -200,6 +200,42 @@ nav button:hover {
 .card-utils {
   border: 1px solid red;
   padding: 12px;
+}
+
+.urlBase {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid hsl(0deg, 0%, 75%);
+}
+
+.output-shortly {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 1rem;
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: hsl(255deg, 11%, 22%);
+}
+.output-shortly h3 {
+  margin-right: 1rem;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 0.3rem;
+  font-weight: 400;
+  color: hsl(180deg, 66%, 49%);
+}
+.output-shortly button {
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  display: inline-block;
+  width: 100%;
+  color: white;
+  font-weight: 600;
 }
 
 .advance-statistic {
@@ -421,42 +457,6 @@ footer {
   color: hsl(180deg, 70%, 60%);
 }
 
-.urlBase {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid hsl(0deg, 0%, 75%);
-}
-
-.output-shortly {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 12px 1rem;
-  background-color: white;
-  margin-top: 2rem;
-  border-radius: 4px;
-  font-weight: 600;
-  color: hsl(255deg, 11%, 22%);
-}
-.output-shortly h3 {
-  margin-right: 1rem;
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 1rem;
-  margin-top: 0.3rem;
-  font-weight: 400;
-  color: hsl(180deg, 66%, 49%);
-}
-.output-shortly button {
-  background-color: hsl(180deg, 66%, 49%);
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  display: inline-block;
-  width: 100%;
-  color: white;
-  font-weight: 600;
-}
-
 .animate {
   position: relative;
   height: 40px;
@@ -471,8 +471,8 @@ footer {
           animation: rotate 2s linear infinite;
   z-index: 2;
   position: absolute;
-  top: 3px;
-  left: calc(50% - 15px);
+  top: 5px;
+  left: calc(50% - 10px);
   width: 30px;
   height: 30px;
 }
@@ -614,12 +614,13 @@ footer {
   }
   .hero .hero-img img {
     width: 100%;
-    transform: translateX(50px);
+    transform: translateX(50px) translateY(-50px);
   }
   .hero .section-right {
     grid-area: content;
     align-items: start;
     justify-content: center;
+    transform: translateY(-50px);
   }
   .hero .section-right .hero-title {
     text-align: start;
@@ -659,7 +660,8 @@ footer {
     margin-left: 10px;
   }
   .spinner {
-    top: 10px;
+    top: 8px;
+    left: calc(50% - 15px);
   }
   .advance-statistic .advance-contain {
     width: 40%;
@@ -748,6 +750,7 @@ footer {
   }
   .urlBase {
     border: none;
+    transform: translateY(6px);
   }
   .output-shortly {
     flex-direction: row;
