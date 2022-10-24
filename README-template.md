@@ -45,7 +45,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](#)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/urlshortlyapp-CreiZogduI)
 - Live Site URL: [https://url-shortly-api.azisaja.repl.co](https://url-shortly-api.azisaja.repl.co)
 
 ## My process
